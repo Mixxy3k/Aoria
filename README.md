@@ -8,7 +8,7 @@
       - write log to file
   - Created window
     - Todo: 
-      - handling events in it's own thread
+      - handling events in its own thread
             
   - Created progenitor of game loop (Will be updated soon, I promise ;-;)
     - Todo:
