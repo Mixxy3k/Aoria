@@ -9,4 +9,10 @@
     <PackageReference Include="SFML.Net" Version="2.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="image.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

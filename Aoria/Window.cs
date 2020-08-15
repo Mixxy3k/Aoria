@@ -38,9 +38,10 @@ namespace Aoria
                 logger.Error("Cannot create window!");
 
             GameWindow.KeyPressed += Window_KeyPressed;
-            GameWindow.Closed += (_, __) =>
+            GameWindow.Closed += (sender, __) =>
             {
-                GameWindow.Close();
+                var window = (SFML.Window.Window)sender;
+                window.Close();
                 logger.Info("Game closed via [X] button");
             };
         }

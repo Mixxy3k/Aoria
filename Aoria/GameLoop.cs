@@ -1,4 +1,5 @@
 ﻿using SFML.Graphics;
+using SFML.System;
 using System.Threading.Tasks;
 
 namespace Aoria
@@ -44,11 +45,20 @@ namespace Aoria
 
         public void WindowLoop()
         {
+            gameState = GameState.IN_GAME;
+
+            Player player = new Player();
+
+            Color color = new Color(100, 255, 100, 255);
+
+
             while (window.GameWindow.IsOpen)
             {
                 window.GameWindow.DispatchEvents();
 
-                window.GameWindow.Clear(Color.Transparent);
+                window.GameWindow.Clear(color);
+
+                window.GameWindow.Draw(player);
 
                 window.GameWindow.Display();
             }
