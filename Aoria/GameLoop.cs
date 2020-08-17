@@ -37,8 +37,6 @@ namespace Aoria
         private GameLoop()
         {
             gameState = GameState.UNKNOW;
-            window = Window.Instance;
-            logger = Logger.Instance;
 
             logger.Info("Initiated game loop!");
         }
@@ -54,7 +52,7 @@ namespace Aoria
 
             while (window.GameWindow.IsOpen)
             {
-                window.GameWindow.DispatchEvents();
+                Update();   
 
                 window.GameWindow.Clear(color);
 
@@ -65,8 +63,21 @@ namespace Aoria
             return;
         }
 
+        private void Update()
+        {
+            window.ClearKeyList();
+            window.GameWindow.DispatchEvents();
+
+            switch(window.keyList)
+            {
+                case KeyList.PressedA:
+                    logger.Debug("A");
+                    break;
+            }
+        }
+
         public GameState gameState;
-        private Window window;
-        private Logger logger;
+        private readonly Window window = Window.Instance;
+        private readonly Logger logger = Logger.Instance;
     }
 }

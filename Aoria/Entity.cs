@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using SFML.Graphics;
+using SFML.System;
 
 namespace Aoria
 {
@@ -14,5 +15,7 @@ namespace Aoria
         protected Logger logger;
 
         public void Draw(RenderTarget target, RenderStates states) => target.Draw(Sprite, states);
+
+        public void Move(float X, float Y) => Sprite.Position += new Vector2f(X, Y);
     }
 }

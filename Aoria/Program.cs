@@ -9,7 +9,7 @@ namespace Aoria
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             GameLoop gameLoop = GameLoop.Instance;
             gameLoop.WindowLoop();

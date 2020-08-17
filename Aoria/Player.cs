@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Aoria
 {
-    class Player: Entity
+    class Player : Entity
     {
         public Player()
 
@@ -29,5 +29,7 @@ namespace Aoria
         public override int HP { get => base.HP; set => base.HP = value; }
 
         public override Sprite Sprite { get { return base.Sprite; } set => base.Sprite = value; }
+
+
     }
 }
